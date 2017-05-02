@@ -1,4 +1,4 @@
-{%  load static %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,12 +11,14 @@
     <button id='login-button' onclick="window.location.href='/login'" type="button">Login</button>
     <button id='logout-button' onclick="window.location.href='/logout'" type="button">Logout</button>
     <p>{{ data }}</p>
-    {%  if user.is_authenticated %}
+    {% if user.is_authenticated %}
     <p>Welcome to our application!</p>
     <form action="/test/" method="POST">
-        <input type="text" data-model-name="name">
+        {% csrf_token %}
+        <input type="text" name="name">
+        <input type="text" name="description">
         <button type="submit">Shove it</button>
     </form>
-    {%  endif %}
+    {% endif %}
 </body>
 </html>
