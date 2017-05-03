@@ -1,3 +1,21 @@
 body{
-    display: inline-block;
+    background-color: deepskyblue;
+}
+
+#cloud-logo {
+    width: 40%;
+    height: 20%;
+}
+
+.center-div {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 20%;
+    height: 20%;
+    background-color: #ccc;
+    border-radius: 3px;
 }
